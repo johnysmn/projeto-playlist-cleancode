@@ -19,7 +19,7 @@ class SongRegisterView:
         self.__clear()
 
         message = '''
-            Música cadastrada com sucesso!
+            Música cadastrada com sucesso!\n
             * Título: {}
             * Quantidade: {}
         '''.format(
@@ -32,7 +32,7 @@ class SongRegisterView:
         self.__clear()
 
         message = '''
-            Falha ao registrar música!
+            Falha ao registrar música!\n
             * Erro: {}
         '''.format(
             controller_response['error']
