@@ -9,7 +9,7 @@ def start() -> None:
             print("Adicionando playlist")
         elif command == '5': exit()
         else:
-            print("\nComando não encontrado, tente novamente... \n\n")
+            print("\nComando não encontrado, tente novamente... \n")
 
 
             
