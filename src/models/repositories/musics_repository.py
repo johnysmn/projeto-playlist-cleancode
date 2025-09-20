@@ -11,7 +11,6 @@ class __MusicsRepository:
         for music in self.__music_list:
             if music.title == music_title:
                 return music    
-            
         return None
             
     def get_all_songs(self) -> list:

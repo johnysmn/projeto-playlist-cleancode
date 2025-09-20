@@ -2,6 +2,7 @@ import random
 from src.models.repositories.musics_repository import musics_repository
 
 class PlaylistCreatorController:
+    # Princípio da responsabilidade única
     def create_playlist(self) -> dict:
         try:
             musics = self.__get_all_musics_and_verify()

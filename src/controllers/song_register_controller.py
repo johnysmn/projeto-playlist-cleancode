@@ -1,7 +1,8 @@
 from src.models.entities.music import Music
 from src.models.repositories.musics_repository import musics_repository
 
-class SongRegisterController:   
+class SongRegisterController:
+    # Princípio da responsabilidade única   
     def insert(self, new_song_informations: dict) -> dict:
         try:
             self.__verify_songs_infos(new_song_informations)
