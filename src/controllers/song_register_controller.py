@@ -1,4 +1,4 @@
-class SongRegisterController:
+class SongRegisterController:   
     def insert(self, new_song_informations: dict) -> dict:
         try:
             self.__verify_songs_infos(new_song_informations)
@@ -12,7 +12,15 @@ class SongRegisterController:
         if len(new_song_informations['title']) > 100:
             raise Exception('Título da música com mais de 100 caracteres')
         
-        year = int(new_song_informations['year'])
+        year_str = new_song_informations['year']
+        if not isinstance(year_str, int):
+            try:
+                year = int(year_str)
+            except (ValueError, TypeError):
+                raise Exception('Ano deve ser um número inteiro!')
+        else:
+            year = year_str
+            
         if year >= 2026:
             raise Exception('Ano de música inválido!')
 
